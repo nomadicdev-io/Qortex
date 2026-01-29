@@ -7,6 +7,7 @@ import { appBearer, appIP, appJWT, appLogger, appRateLimit, appServerTiming } fr
 import { redis, sqlite } from './db';
 import defaultErrorHandler from './lib/defaultErrorHandler';
 import ora from 'ora';
+import logger from './lib/logger';
 
 // Application DB Handler
 const dbInitSpinner = ora('Initializing Databases...\n').start();
@@ -40,7 +41,7 @@ const app = new Elysia({
     },
     () => {
         appInitSpinner.succeed('Application initialized successfully');
-        console.log(`Server is running on port ${process.env.PORT}`)
+        logger.startup()
     }
 )
 

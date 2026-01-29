@@ -28,6 +28,7 @@
     "elysia-healthcheck": "^1.0.0",
     "elysia-ip": "^1.0.10",
     "elysia-rate-limit": "^4.4.2",
+    "gradient-string": "^3.0.0",
     "logixlysia": "^6.1.0",
     "lucide-react": "^0.545.0",
     "mongoose": "^9.1.5",
