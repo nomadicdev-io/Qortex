@@ -11,7 +11,7 @@ if (process.argv.includes("--help") || process.argv.includes("-h")) {
 Usage: bun run build.ts [options]
 
 Common Options:
-  --outdir <path>          Output directory (default: "dist")
+  --outdir <path>          Output directory (default: "build")
   --minify                 Enable minification (or --minify.whitespace, --minify.syntax, etc)
   --sourcemap <type>      Sourcemap type: none|linked|inline|external
   --target <target>        Build target: browser|bun|node
@@ -108,7 +108,7 @@ const formatFileSize = (bytes: number): string => {
 console.log("\n🚀 Starting build process...\n");
 
 const cliConfig = parseArgs();
-const outdir = cliConfig.outdir || path.join(process.cwd(), "dist");
+const outdir = cliConfig.outdir || path.join(process.cwd(), "build");
 
 if (existsSync(outdir)) {
   console.log(`🗑️ Cleaning previous build at ${outdir}`);
@@ -117,10 +117,8 @@ if (existsSync(outdir)) {
 
 const start = performance.now();
 
-const entrypoints = [...new Bun.Glob("**.html").scanSync("src")]
-  .map(a => path.resolve("src", a))
-  .filter(dir => !dir.includes("node_modules"));
-console.log(`📄 Found ${entrypoints.length} HTML ${entrypoints.length === 1 ? "file" : "files"} to process\n`);
+const entrypoints = [path.join(process.cwd(), "index.ts")];
+console.log(`📄 Building from entry point: ${path.relative(process.cwd(), entrypoints[0]!)}\n`);
 
 const result = await Bun.build({
   entrypoints,

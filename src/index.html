@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark" class="dark" data-qortex-app="true" dir="ltr">
   <head>
     
     <!-- Primary Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Qortex - Advanced Developer Storage & Authentication Platform</title>
-    <meta name="title" content="Qortex - Advanced Developer Storage & Authentication Platform" />
+    <title>Qortex - Unified Storage, Auth & File Sharing Platform</title>
+    <meta name="title" content="Qortex - Unified Storage, Auth & File Sharing Platform" />
     <meta name="description" content="Qortex empowers developers with unified file storage, authentication, and secure file sharing. Enterprise-grade security with intuitive APIs for modern development workflows." />
     <meta name="keywords" content="file storage, cloud storage, authentication, file sharing, developer tools, file upload, API, secure storage, file management, developer platform, SaaS backend" />
     <meta name="author" content="Quadbits Lab" />
@@ -18,9 +18,9 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://qortex.quadbits.cloud/" />
-    <meta property="og:title" content="Qortex - Advanced Developer Storage & Authentication Platform" />
+    <meta property="og:title" content="Qortex - Unified Storage, Auth & File Sharing Platform" />
     <meta property="og:description" content="Unified platform for file storage, authentication, and secure file sharing. Built for developers who demand enterprise-grade reliability." />
-    <meta property="og:image" content="https://qortex.quadbits.cloud/og-image.png" />
+    <meta property="og:image" content="https://qortex.quadbits.cloud/public/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Qortex" />
@@ -29,9 +29,9 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://qortex.quadbits.cloud/" />
-    <meta name="twitter:title" content="Qortex - Advanced Developer Storage & Authentication Platform" />
+    <meta name="twitter:title" content="Qortex - Unified Storage, Auth & File Sharing Platform" />
     <meta name="twitter:description" content="Unified platform for file storage, authentication, and secure file sharing. Built for developers who demand enterprise-grade reliability." />
-    <meta name="twitter:image" content="https://qortex.quadbits.cloud/twitter-image.png" />
+    <meta name="twitter:image" content="https://qortex.quadbits.cloud/public/twitter-image.png" />
     <meta name="twitter:creator" content="@quadbitslab" />
 
     <!-- Additional SEO Meta Tags -->
@@ -43,31 +43,36 @@
     <meta name="theme-color" content="#6366f1" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png" />
+    <link rel="manifest" href="/public/site.webmanifest" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://qortex.quadbits.cloud/" />
 
     <!-- Preconnect for Performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <!--Scripts-->
     <script type="module" src="./main.tsx" async></script>
 
   </head>
-  <body>
-    <div id="root"></div>
+  <body class="w-full min-h-screen bg-bg">
+
+    <!--Applicaiton Root-->
+    <div class="w-full h-full" id="root"></div>
+
+    <!--Scripts-->    
     <script>
       console.log(
         '%cDeveloped By, Quadbits Lab https://lab.quadbits.io',
         'background: #333; text-align: center; color: #FAFAFA; font-weight: bold; font-size: 14px; padding:8px; border-radius: 4px 0 0 4px; border: 1px solid #cacaca',
       )
     </script>
+    
   </body>
 </html>
