@@ -78,7 +78,7 @@ export const redis = async () => {
 }
 
 export const sqlite = ()=> {
-    const db = new Database("./translation.sqlite");
+    const db = new Database("./db.sqlite");
     return db;
 }
 
