@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import {morning, vice, mind} from 'gradient-string';
+import {vice, mind} from 'gradient-string';
 
 const logger = {
     startup: ()=> {
