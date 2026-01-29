@@ -2,7 +2,7 @@ import { openapi } from '@elysiajs/openapi'
 
 const openApiPlugin = openapi({
     provider: 'scalar',
-    path: '/api/docs',
+    path: '/docs',
     documentation: {
         info: {
             title: 'Qortex - Unified Storage, Auth & File Sharing Platform',
